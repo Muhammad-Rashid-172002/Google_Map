@@ -4,17 +4,18 @@ import 'package:geolocator/geolocator.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
 import 'package:google_maps_webservice/places.dart';
 
-const kGoogleApiKey = ''; // Replace with your API key
+const kGoogleApiKey =
+    'AIzaSyBkOEO9Gvns0VwTXA2M6qq6D9INoGitHcA'; // Replace with your API key
 final GoogleMapsPlaces _places = GoogleMapsPlaces(apiKey: kGoogleApiKey);
 
-class TestingMaps extends StatefulWidget {
-  const TestingMaps({super.key});
+class SecondScreen extends StatefulWidget {
+  const SecondScreen({super.key});
 
   @override
-  State<TestingMaps> createState() => _TestingMapsState();
+  State<SecondScreen> createState() => _SecondScreenState();
 }
 
-class _TestingMapsState extends State<TestingMaps> {
+class _SecondScreenState extends State<SecondScreen> {
   late GoogleMapController mapController;
   LatLng? _initialPosition;
   final Set<Marker> _markers = {};
@@ -37,11 +38,13 @@ class _TestingMapsState extends State<TestingMaps> {
       if (permission == LocationPermission.denied) {
         print("Requesting location permission...");
         permission = await Geolocator.requestPermission();
-        if (permission == LocationPermission.denied)
+        if (permission == LocationPermission.denied) {
           throw 'Location permission denied.';
+        }
       }
-      if (permission == LocationPermission.deniedForever)
+      if (permission == LocationPermission.deniedForever) {
         throw 'Location permission permanently denied.';
+      }
 
       Position position = await Geolocator.getCurrentPosition();
       print("Current position: ${position.latitude}, ${position.longitude}");

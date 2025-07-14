@@ -52,7 +52,7 @@ class _GoogleMapScreenState extends State<GoogleMapScreen> {
             markerId: const gmaps.MarkerId('currentLocation'),
             position: _initialPosition!,
             infoWindow: const gmaps.InfoWindow(title: 'Your Location'),
-            icon: BitmapDescriptor.defaultMarkerWithHue(
+            icon: gmaps.BitmapDescriptor.defaultMarkerWithHue(
               BitmapDescriptor.hueBlue,
             ),
           ),

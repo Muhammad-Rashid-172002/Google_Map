@@ -15,9 +15,12 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Google Map',
       theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+        useMaterial3: true,
+        colorSchemeSeed: Colors.deepPurple,
+        // primarySwatch: Colors.deepPurple,
       ),
       home: const GoogleMapScreen(),
     );
   }
 }
+//AIzaSyBkOEO9Gvns0VwTXA2M6qq6D9INoGitHcA
