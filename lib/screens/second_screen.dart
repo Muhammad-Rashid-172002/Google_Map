@@ -4,8 +4,7 @@ import 'package:geolocator/geolocator.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
 import 'package:google_maps_webservice/places.dart';
 
-const kGoogleApiKey =
-    'AIzaSyBkOEO9Gvns0VwTXA2M6qq6D9INoGitHcA'; // Replace with your API key
+const kGoogleApiKey = ''; // Replace with your API key
 final GoogleMapsPlaces _places = GoogleMapsPlaces(apiKey: kGoogleApiKey);
 
 class SecondScreen extends StatefulWidget {
